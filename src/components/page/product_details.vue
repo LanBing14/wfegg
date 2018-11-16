@@ -35,10 +35,8 @@
       <div class="userEvaluate" v-for="(item,index) in clist" :key="index">
         <div class="evaluateBox">
           <img :src=item.img class="touxiang">
-          <!-- {{username.length >5?username.splice(0,5):username}} -->
           <div class="cenmte" >
-            <span class="userName">{{item.userName}}</span>
-            <!-- <span class="userName">13234r2qrqwt</span> -->
+            <span class="userName">{{userName}}</span>
             <span class="userPhone">{{item.phone}}</span>
           </div>
           <div class="zan">

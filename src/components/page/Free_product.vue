@@ -36,7 +36,7 @@
         <div class="evaluateBox">
           <img :src=item.img class="touxiang">
           <div class="cenmte" >
-            <span class="userName">{{item.userName}}</span>
+            <span class="userName">{{item.username}}</span>
             <span class="userPhone">{{item.phone}}</span>
           </div>
           <div class="zan">
@@ -53,9 +53,9 @@
     <div class="productDetails">
       <p v-html="content"></p>
     </div>
-    <div class="scrollbottomWx" v-if="showClose" @click="closeModel">
+    <!-- <div class="scrollbottomWx" v-if="showClose" @click="closeModel">
       <img src="../../img/white.png" alt="">
-    </div>
+    </div> -->
     <!-- <div class="xiaosanjiao" @click="closeModel" v-if="showClose"></div> -->
 
     <!-- <div class="scrollbottom" @click="closeModel" v-if="showClose">
@@ -164,8 +164,6 @@ export default {
       timestamp: "",
       signature: "",
       activityId: 12,
-      userName: "",
-      packageId: "", //套餐id
       isPayOrder: 0,
       isApply: 1
     };
@@ -338,7 +336,6 @@ export default {
         $this.clist = info.data.data.clist;
         $this.isPayOrder = info.data.data.isPayOrder;
         $this.phone = info.data.data.clist[0].phone;
-        $this.userName = info.data.data.clist[0].username;
         $this.content = info.data.data.content;
         $this.img = info.data.data.clist[0].img;
         $this.contents = info.data.data.clist[0].content;
@@ -562,20 +559,6 @@ export default {
       height: 1.5rem;
       display: block;
     }
-  }
-
-  .xiaosanjiao {
-    display: block;
-    width: 0;
-    height: 0;
-    border-width: 8.5px 10px 0;
-    border-style: solid;
-    border-color: rgb(73, 72, 72) transparent transparent; /*黄 透明 透明 */
-    opacity: 0.8;
-    position: fixed;
-    left: 20%;
-    bottom: 4rem;
-    z-index: 99;
   }
 
   .scrollbottom {
