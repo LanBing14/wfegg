@@ -2,7 +2,7 @@
   <div id="ganenAct">
     <div class="progressOne" >
         <div class="imgPic">
-          <img src="../../img/ganen.jpg" alt="">
+          <img src="../../img/ganenH.jpg" alt="">
         </div>
        <div class="descInfo">
           <p>报名活动时间: 2018年11月20日09:30至2018年11月22日10:00</p>
