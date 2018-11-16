@@ -251,7 +251,7 @@ export default {
     line-height: 2.5rem;
     padding-left: 0.5rem;
     background-color: #fff;
-    margin: 0.5rem 0 1.5rem 0;
+    margin: 0.5rem 0 0.5rem 0;
     padding-right: 0.8rem;
 
     .spanColor {

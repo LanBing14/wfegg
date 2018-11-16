@@ -239,10 +239,10 @@ export default {
   }
   .bottomIMg {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     color: #dcdddd;
     .logoPic {
       width: 35%;
@@ -283,7 +283,7 @@ export default {
       align-items: center;
       text-align: center;
       padding-left: 1rem;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       .buttOne {
         width: 35%;
         height: 3rem;
