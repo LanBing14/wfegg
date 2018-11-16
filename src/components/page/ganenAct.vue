@@ -5,20 +5,23 @@
           <img src="../../img/ganenH.jpg" alt="">
         </div>
        <div class="descInfo">
-          <p>报名活动时间: 2018年11月20日09:30至2018年11月22日10:00</p>
-          <p>开奖时间（22日上午10:30开奖）</p>
+          <p>报名活动时间: 11月20日至11月22日上午10:00</p>
+          <p>开奖时间: 22日上午10:30</p>
+          <p>联系电话：18017116456</p>
           <p>公司电话: 021-51853776</p>
-          <p>活动负责人: 李小姐  联系电话：18017116456</p>
+          <p>活动负责人: 李小姐</p>
+          <p>地址：上海市闵行区七宝镇吴宝路428号台上创意园A6#216</p>
        </div>
-       <div class="descInfo">
-         <p>活动举办方:</p>
-         <p>上海樱芸科技有限公司</p>
-         <p>上海伍福世嘉健康管理有限公司</p>
-       </div>
-       <p class="Address">地址：上海市闵行区七宝镇吴宝路428号台上创意园A6#216</p>
         <div class="fx splitY">
-          <div class="buttOne redCol" @click="sendShare">分享好友送礼物</div>
+          <div class="buttOne redCol" @click="sendShare">分享好友领礼物</div>
         </div>
+        <div class="bottomIMg">
+           <p class="Address">本活动最终解释权由伍福世嘉健康管理有限公司所有</p>
+        <div class="logoPic">
+          <img src="../../img/logo.png" alt="">
+        </div>
+        </div>
+        
     </div>
     <!-- 蒙版 -->
       <div class="box" id="box" @click="isShow=false" v-if="isShow"></div>
@@ -219,14 +222,35 @@ export default {
       width: 100%;
     }
   }
+
   .descInfo {
     margin: 0.65rem;
     font-size: 14px;
+    line-height: 1.6rem;
+  }
+  .descInfoD {
+    margin: 0.65rem;
+    font-size: 12px;
     line-height: 1.3rem;
   }
   .Address {
     font-size: 14px;
-    margin: 0.7rem;
+    text-align: center;
+  }
+  .bottomIMg {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: #dcdddd;
+    .logoPic {
+      width: 35%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
   }
   /*蒙版*/
   .box {
@@ -265,7 +289,7 @@ export default {
         height: 3rem;
         line-height: 3rem;
         font-size: 0.8rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-right: 1rem;
         border: 1px solid #000;
         background-color: #fff;
