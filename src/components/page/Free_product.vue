@@ -528,8 +528,8 @@ export default {
     }
     .evaluateBtn {
       color: #000;
-      font-size: 1.2rem;
-      width: 11rem;
+      font-size: 1rem;
+      width: 8rem;
       line-height: 2.5rem;
       background-color: #fff !important;
       margin: 0 auto;
@@ -608,14 +608,14 @@ export default {
     align-items: center;
     bottom: 0;
     position: fixed;
-    height: 4.3rem;
+    height: 3rem;
     background: #ffffff;
 
     .buy {
       width: 100%;
-      height: 4.3rem;
-      line-height: 4.3rem;
-      font-size: 1.2rem;
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 1rem;
       text-align: center;
       background: #cc3e36;
       color: #ffffff;

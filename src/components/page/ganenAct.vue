@@ -253,7 +253,6 @@ export default {
   .progressOne {
     height: 10rem;
     background-color: #fff;
-
     .splitY {
       display: flex;
       justify-content: center;
@@ -265,10 +264,11 @@ export default {
         width: 35%;
         height: 3rem;
         line-height: 3rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-top: 2rem;
         margin-right: 1rem;
-        background-color: pink;
+        border: 1px solid #000;
+        background-color: #fff;
         border-radius: 1.4rem;
         color: #000;
       }
