@@ -127,9 +127,7 @@ export default {
   methods: {
     //  返回上一级页面
     goBack() {
-      this.$router.push({
-        path: "/"
-      });
+      this.$router.back();
     },
     // 点击地址信息块跳转到‘创建地址’页面
     goAddress() {

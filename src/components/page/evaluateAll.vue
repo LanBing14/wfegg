@@ -90,7 +90,7 @@ export default {
   methods: {
     // 返回上一页
     goBack() {
-      this.$router.push({ path: "/" });
+      this.$router.back();
     },
     getpublished() {
       var $this = this;

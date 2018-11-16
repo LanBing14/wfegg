@@ -31,6 +31,7 @@ import blank from "@/components/page/blank";
 import place_success from "@/components/page/place_success";
 import robEgg from "@/components/page/robEgg";
 import ganenAct from "@/components/page/ganenAct";
+import Free_product from "@/components/page/Free_product";
 
 Vue.use(Router);
 
@@ -61,6 +62,11 @@ export default new Router({
       path: "/",
       name: "blank",
       component: blank
+    },
+    {
+      path: "/Free_product",
+      name: "Free_product",
+      component: Free_product
     },
     {
       path: "/order_confirmation",
