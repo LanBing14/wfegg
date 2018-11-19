@@ -17,9 +17,9 @@
         </div>
         <div class="bottomIMg">
            <p class="Address">本活动最终解释权由伍福世嘉健康管理有限公司所有</p>
-        <div class="logoPic">
-          <img src="../../img/logo.png" alt="">
-        </div>
+            <div class="logoPic">
+              <img src="../../img/logo.png" alt="">
+            </div>
         </div>
         
     </div>
@@ -242,6 +242,7 @@ export default {
     position: fixed;
     bottom: 0;
     left: 50%;
+    margin-top: 1rem;
     transform: translateX(-50%);
     color: #dcdddd;
     .logoPic {
@@ -275,22 +276,20 @@ export default {
     left: 3.3rem;
   }
   .progressOne {
-    height: 10rem;
     background-color: #fff;
     .splitY {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      padding-left: 1rem;
-      // margin-bottom: 1rem;
+      margin-top: 2.5rem;
+      position: relative;
       .buttOne {
         width: 35%;
         height: 3rem;
         line-height: 3rem;
+        position: absolute;
         font-size: 0.8rem;
-        margin-top: 1rem;
-        margin-right: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
         border: 1px solid #000;
         background-color: #fff;
         border-radius: 1.4rem;
