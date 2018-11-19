@@ -13,10 +13,10 @@
     <div class="productInfo">
       <div class="infoOne">
         <p class="eggName">{{title}}</p>
-        <div class="moneyReward" @click="goMakeMoney">
+        <!-- <div class="moneyReward">
           <img class="iconMoney" src="../../img/shangjin.png" />
           <p class="moneyTitle">赚赏金</p>
-        </div>
+        </div> -->
       </div>
       <div class="infoTwo">
         <p class="active1">包月发送</p>
@@ -67,8 +67,11 @@
     </div> -->
     <!--立即购买-->
     <div class="buyAndRob">
+       <div class="rob" @click="targetPrd">
+        <p>购买多月套餐</p>
+      </div>
       <div class="buy" @click="showToggle">
-        <p>立即购买</p>
+        <p>购买单月套餐</p>
       </div>
     </div>
     <!--蒙版-->
@@ -304,6 +307,9 @@ export default {
         }
       });
     },
+    targetPrd() {
+      this.$router.push("product_details");
+    },
     moun() {
       var $this = this;
       var baseUrl = BaseUrl + "api/activityProductDetail";
@@ -343,7 +349,8 @@ export default {
       });
     }
   },
-  created() {},
+  created() {
+  },
   mounted() {
     if (!localStorage.getItem("openid")) {
       if (utils.getQueryString("code")) {
@@ -608,15 +615,24 @@ export default {
     align-items: center;
     bottom: 0;
     position: fixed;
-    height: 3rem;
+    height: 48px;
     background: #ffffff;
-
+    .rob {
+      width: 50%;
+      height: 46px;
+      line-height: 46px;
+      text-align: center;
+      background-color: #fff;
+      border: 1px solid #cc3e36;
+      color: #cc3e36;
+    }
     .buy {
-      width: 100%;
-      height: 3rem;
-      line-height: 3rem;
+      width: 50%;
+      height: 46px;
+      line-height: 46px;
       font-size: 1rem;
       text-align: center;
+      border: 1px solid #cc3e36;
       background: #cc3e36;
       color: #ffffff;
     }
