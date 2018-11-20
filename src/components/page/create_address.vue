@@ -48,7 +48,7 @@
       <img src="../../img/remaind.png" alt="" class="mbicon">
       <div class="attention">
         <img src="../../img/jingao.png" alt="">
-        <p>黑龙江、辽宁、吉林因天气原因,冬季11月-次年2月不发货
+        <p>黑龙江、辽宁、吉林、内蒙古因天气原因,冬季11月-次年2月不发货
           </br>
           春季开始每月补发一箱补满为止
           </br>
@@ -137,7 +137,7 @@ export default {
   methods: {
     //返回上页面‘订单确认order_confirmation’
     goBack() {
-   this.$router.back();
+      this.$router.back();
     },
     //点击蒙版：蒙版+弹出框隐藏
     hideToggle() {
@@ -195,7 +195,8 @@ export default {
           if (
             this.address.substring(0, 4) == "黑龙江省" ||
             this.address.substring(0, 3) == "吉林省" ||
-            this.address.substring(0, 3) == "辽宁省"
+            this.address.substring(0, 3) == "辽宁省" ||
+            this.address.substring(0, 3) == "内蒙古"
           ) {
             this.hintShowSeason = true;
             this.isMark = true;

@@ -4,9 +4,20 @@
         <div class="imgPic">
           <img src="../../img/ganenH.jpg" alt="">
         </div>
-       <div class="descInfo">
-          <p>报名活动时间: 11月20日至11月22日上午10:00</p>
-          <p>开奖时间: 22日上午10:30</p>
+        <div  class="descInfo">
+          <p>伍福许愿奖池：<br/>
+               <span style="padding-left: 20px"> A：樱花护手霜套装</span><br/>
+                <span style="padding-left: 20px">B: 松茸黑枸杞 </span><br/>
+                <span style="padding-left: 20px">C：厨房锅具套装</span><br/>
+                <span style="padding-left: 20px">D：陶瓷咖啡杯套装</span><br/>
+               <span style="padding-left: 20px"> E：好太太洗衣液</span>
+                等等.....总价值50万大奖等你来拿！</p>
+              <p> 温暖治愈你的心和胃，这里是一个惊喜不断的公众号</p>
+              <p>长按识别上方二维码，关注公众号输入'<span style="color:red">1</span>'选你想要的礼物</p>
+        </div>
+       <div class="descInfoF">
+          <p>报名活动时间: 11月20日至11月22日</p>
+          <!-- <p>开奖时间: 22日</p> -->
           <p>联系电话：18017116456</p>
           <p>公司电话: 021-51853776</p>
           <p>活动负责人: 李小姐</p>
@@ -217,6 +228,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 #ganenAct {
+  position: relative;
+  height: 100%;
   .imgPic {
     img {
       width: 100%;
@@ -228,10 +241,10 @@ export default {
     font-size: 14px;
     line-height: 1.6rem;
   }
-  .descInfoD {
+  .descInfoF {
     margin: 0.65rem;
-    font-size: 12px;
-    line-height: 1.3rem;
+    font-size: 14px;
+    line-height: 1.6rem;
   }
   .Address {
     font-size: 14px;
@@ -239,11 +252,8 @@ export default {
   }
   .bottomIMg {
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
+    height: 3rem;
     margin-top: 1rem;
-    transform: translateX(-50%);
     color: #dcdddd;
     .logoPic {
       width: 35%;
@@ -276,10 +286,9 @@ export default {
     left: 3.3rem;
   }
   .progressOne {
-    background-color: #fff;
     .splitY {
+      height: 3rem;
       text-align: center;
-      margin-top: 2.5rem;
       position: relative;
       .buttOne {
         width: 35%;
