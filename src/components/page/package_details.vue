@@ -461,7 +461,7 @@ export default {
     this.goodsId = this.$route.query.goodsId;
     this.openid = localStorage.getItem("openid");
     this.orderSn = this.$route.query.orderSn;
-    // this.openid = "oX6js0S0Pqsh6ijuNs48kDFN3w6s";
+    // this.openid = "oX6js0QSdvyFy_Yhjkk3upHHR_e0";
 
     this.datas();
     this.Address();

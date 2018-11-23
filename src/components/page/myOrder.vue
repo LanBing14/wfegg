@@ -43,9 +43,7 @@
        <!--列表信息-->
         <div class="orderBox" v-for="(item,index) in receivingList" >
           <p  class="orderNum">订单编号:<span> {{item.orderSn}} </span></p>
-
           <div class="goodsInfo" @click="getOrderDetail(item.id)">
-
             <img src="../../img/swiper.png" alt="">
             <div class="name">
               <p style="font-size: 0.875rem;width:50%;">{{item.packageInfo.goodsName}}</p>
@@ -62,15 +60,41 @@
             </p>
           </div>
           <div class="btns">
-            <!-- <div class="cancelBtn" @click="reqAddress">修改收货地址</div> -->
             <div class="goPay" @click="nextStay(item)">套餐详情</div> <!--状态二-->
             <div class="flag">{{item.status}}</div>
           </div>
         </div>
+
+        <!-- 待评价 -->
+         <div class="orderBox" v-for="(item,index) in evaluateList" >
+          <p  class="orderNum">订单编号:<span> {{item.orderSn}} </span></p>
+          <div class="goodsInfo" @click="getOrderDetail(item.id)">
+            <img src="../../img/swiper.png" alt="">
+            <div class="name">
+              <p style="font-size: 0.875rem;width:50%;">{{item.packageInfo.goodsName}}</p>
+              <p style="color: #B4B3B3;line-height:2rem;font-size:0.75rem;">{{item.packageInfo.title}}</p>             
+              <div class="money">
+                <p class="jine" style="color:#252424;">￥{{item.packageInfo.sellPrice}}</p>
+                <p class="shul" style="color:#B4B3B3;">x{{item.number}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="total">
+            <p>共{{item.number}}件商品，合计
+              <span>￥{{item.amount}}</span>
+            </p>
+          </div>
+          <div class="btns">
+            <div class="goPay" @click="nextStay(item)">套餐详情</div> 
+            <div class="flag">{{item.status}}</div>
+          </div>
+        </div>
+
+
         
         
        <!--列表信息-->
-        <!--<div class="orderBox" :key="index">
+        <!-- <div class="orderBox" :key="index" v-for="(item,index) in receivingList">
           <div class="goodsInfo">
             <img src="../../img/swiper.png" alt="">
             <div class="name">
@@ -92,7 +116,7 @@
             <div class="cancelBtn" @click="deletes(key)">删除订单</div>
             <div class="goPay" @click="details2">订单详情</div>    
           </div>
-        </div>          <!--状态三-->
+        </div>        -->
         
       </mt-tab-container-item>
       
@@ -201,7 +225,7 @@ export default {
       var baseUrl = BaseUrl + "/api/getOrderList";
       var data = qs.stringify({
         openid: localStorage.getItem("openid"),
-        // openid: "oX6js0S0Pqsh6ijuNs48kDFN3w6s",
+        // openid: "oX6js0QSdvyFy_Yhjkk3upHHR_e0",
         type: $this.selected
       });
       axios({
@@ -210,7 +234,7 @@ export default {
         type: "json",
         data: data
       }).then(function(data) {
-        console.log(data);
+        console.log(data, 111111);
         let datas = data.data.data;
         $this.id = datas[0].id; //订单id
         if (data.data.status == 1) {
