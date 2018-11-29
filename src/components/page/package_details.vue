@@ -260,7 +260,7 @@ export default {
           $this.goodsIdAll = datas.goodsId;
           $this.packageIdAll = datas.packageId;
           $this.numberAll = datas.number;
-          $this.totalPriceAll = datas.totalPrice / 100;
+          $this.totalPriceAll = datas.totalPrice
           $this.aidAll = datas.address;
 
           if (num == 0) {
